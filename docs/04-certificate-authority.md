@@ -36,11 +36,11 @@ cat > ca-csr.json <<EOF
   },
   "names": [
     {
-      "C": "US",
-      "L": "Portland",
+      "C": "CN",
+      "L": "Pudong",
       "O": "Kubernetes",
       "OU": "CA",
-      "ST": "Oregon"
+      "ST": "Shanghai"
     }
   ]
 }
@@ -49,6 +49,12 @@ EOF
 cfssl gencert -initca ca-csr.json | cfssljson -bare ca
 
 }
+```
+
+Or
+
+```
+
 ```
 
 Results:
@@ -78,11 +84,11 @@ cat > admin-csr.json <<EOF
   },
   "names": [
     {
-      "C": "US",
-      "L": "Portland",
+      "C": "CN",
+      "L": "Pudong",
       "O": "system:masters",
-      "OU": "Kubernetes The Hard Way",
-      "ST": "Oregon"
+      "OU": "Kubernetes Ltd.",
+      "ST": "Shanghai"
     }
   ]
 }
@@ -122,11 +128,11 @@ cat > ${instance}-csr.json <<EOF
   },
   "names": [
     {
-      "C": "US",
-      "L": "Portland",
+      "C": "CN",
+      "L": "Pudong",
       "O": "system:nodes",
-      "OU": "Kubernetes The Hard Way",
-      "ST": "Oregon"
+      "OU": "Kubernetes Ltd.",
+      "ST": "Shanghai"
     }
   ]
 }
@@ -175,11 +181,11 @@ cat > kube-controller-manager-csr.json <<EOF
   },
   "names": [
     {
-      "C": "US",
-      "L": "Portland",
+      "C": "CN",
+      "L": "Pudong",
       "O": "system:kube-controller-manager",
-      "OU": "Kubernetes The Hard Way",
-      "ST": "Oregon"
+      "OU": "Kubernetes Ltd.",
+      "ST": "Shanghai"
     }
   ]
 }
@@ -219,11 +225,11 @@ cat > kube-proxy-csr.json <<EOF
   },
   "names": [
     {
-      "C": "US",
-      "L": "Portland",
+      "C": "CN",
+      "L": "Pudong",
       "O": "system:node-proxier",
-      "OU": "Kubernetes The Hard Way",
-      "ST": "Oregon"
+      "OU": "Kubernetes Ltd.",
+      "ST": "Shanghai"
     }
   ]
 }
@@ -262,11 +268,11 @@ cat > kube-scheduler-csr.json <<EOF
   },
   "names": [
     {
-      "C": "US",
-      "L": "Portland",
+      "C": "CN",
+      "L": "Pudong",
       "O": "system:kube-scheduler",
-      "OU": "Kubernetes The Hard Way",
-      "ST": "Oregon"
+      "OU": "Kubernetes Ltd.",
+      "ST": "Shanghai"
     }
   ]
 }
@@ -314,11 +320,11 @@ cat > kubernetes-csr.json <<EOF
   },
   "names": [
     {
-      "C": "US",
-      "L": "Portland",
+      "C": "CN",
+      "L": "Pudong",
       "O": "Kubernetes",
-      "OU": "Kubernetes The Hard Way",
-      "ST": "Oregon"
+      "OU": "Kubernetes Ltd.",
+      "ST": "Shanghai"
     }
   ]
 }
@@ -362,11 +368,11 @@ cat > service-account-csr.json <<EOF
   },
   "names": [
     {
-      "C": "US",
-      "L": "Portland",
+      "C": "CN",
+      "L": "Pudong",
       "O": "Kubernetes",
-      "OU": "Kubernetes The Hard Way",
-      "ST": "Oregon"
+      "OU": "Kubernetes Ltd.",
+      "ST": "Shanghai"
     }
   ]
 }
